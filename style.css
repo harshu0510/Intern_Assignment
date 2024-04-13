@@ -1,0 +1,163 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: cursive;
+
+  }
+  
+  .container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%;
+    background-color: lightpink;
+  }
+  
+  .input-group {
+    margin-bottom: 10px;
+    display: block;
+    align-items: center;
+  }
+  
+  label {
+    width: 150px;
+    margin-right: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bolder;
+  }
+  
+  input[type="number"],
+  select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    color: black;
+    background-color: beige;
+    font-weight: bold;
+  }
+
+
+#gross-income::after {
+  content: "*";
+  color: red;
+  margin-left: 5px;
+  position: relative;
+}
+
+#gross-income::before {
+  content: "\2610";
+  color: blue;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 14px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#gross-income:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+  
+  .error-icon {
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 5px;
+  }
+  
+  .error-icon:hover {
+    display: block;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .modal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(115, 14, 209, 0.986);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: purple;
+  }
+  
+  #output {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .tooltip-icon {
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tooltip-icon i {
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.tooltip-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -5px);
+    min-width: 70px;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.tooltip-trigger:hover .tooltip-message {
+    display: block;
+}
